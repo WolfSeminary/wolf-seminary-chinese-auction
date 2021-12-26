@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import PrizesSum from './PrizesSum';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <PrizesSum/>
   </React.StrictMode>,
   document.getElementById('root')
 );
