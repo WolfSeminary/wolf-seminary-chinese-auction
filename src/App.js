@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import ButtonAppBar from './AppBar';
+import MyAppBar from './AppBar';
 
 function App() {
   return (
     <div className="App">
 
-      <ButtonAppBar />
+      <MyAppBar />
 
     </div>
 
