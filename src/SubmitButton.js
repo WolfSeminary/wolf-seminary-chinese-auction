@@ -1,21 +1,16 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
+import PanToolIcon from '@mui/icons-material/PanTool';
 import Stack from '@mui/material/Stack';
-import { Box, Icon } from '@mui/material';
 
 export default function SubmitButton() {
     return (
-        <Stack direction="col" spacing={2}>
-
-            {/* <Button variant="contained" endIcon={<SendIcon />}> */}
-            <Button variant="contained">
-                אשר הכנסת סכום מדויק לתשלום בקופות הייעודיות
-            </Button>
-            <Box>
-                👇
-            </Box>
-        </Stack>
+        <div style={{ display: 'flex', width: '30vw', justifyItems: 'center' }}>
+            <Stack direction="column" spacing={2}>
+                <Button direction="column" variant="contained" endIcon={<PanToolIcon />}> 
+                    אשר הכנסת סכום מדויק לתשלום בקופות הייעודיות
+                </Button>
+            </Stack>
+        </div>
     );
 }
