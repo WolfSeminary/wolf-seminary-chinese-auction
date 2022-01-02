@@ -1,10 +1,10 @@
-import { TableContainer,TableCell,TableBody,TableHead,Table } from '@mui/material';
+import { TableContainer, TableCell, TableBody, TableHead, Table } from '@mui/material';
 
 const PricesTable = () => {
     return (
         <TableContainer>
-            <Table >
-                <TableHead >
+            <Table>
+                <TableHead>
                     <TableCell align="center">מחיר</TableCell>
                     <TableCell align="center">כמות</TableCell>
                     <TableCell align="center">פריט</TableCell>
@@ -16,6 +16,6 @@ const PricesTable = () => {
                 </TableBody>
             </Table>
         </TableContainer>
-        )
+    )
 }
 export default PricesTable
