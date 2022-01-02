@@ -2,12 +2,14 @@ import * as React from 'react';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
+import { useState } from 'react';
 const BonussCard=()=> {
-  const rootRef = React.useRef(null);
-
+const rootRef = React.useRef(null);
+ const [shouldShowNoticeModal,SetshouldShowNoticeModal]=useState(false)
   return (
-    <Box
+    <>
+  {shouldShowNoticeModal &&
+   <Box
       sx={{
         height: 300,
         flexGrow: 1,
@@ -50,12 +52,12 @@ const BonussCard=()=> {
             !כרטיס בונוס
           </Typography>
           <Typography id="server-modal-description" sx={{ pt: 2 }}>
-         
            קנית 3 כרטיסים מאותה קטגוריה בחר מתנה נוספת בחינם 
           </Typography>
         </Box>
       </Modal>
-    </Box>
+    </Box>}
+      </>
   );
-}
+        }
 export default BonussCard;
