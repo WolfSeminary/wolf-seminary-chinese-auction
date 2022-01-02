@@ -8,7 +8,6 @@ import PrizesSum from './PrizesSum';
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <PrizesSum/>
   </React.StrictMode>,
   document.getElementById('root')
 );
