@@ -21,10 +21,13 @@ export default function MyAppBar() {
 
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         ברוכים הבאים למכירת החסד של סמינר וולף
-                        <p style={{ margin: '0px' }}>מפעל הבית</p>
+                       <br/>
+                        מפעל הבית
+                        {/* <p style={{ margin: '0px' }}>מפעל הבית</p> */}
                     </Typography>
-
+                  
                 </Toolbar>
+              
             </AppBar>
         </Box>
     );
