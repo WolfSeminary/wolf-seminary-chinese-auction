@@ -1,15 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import TotalPrice from './TotalPrice';
+import React from 'react';
+import BonussCard from './NoticeModal';
+
+
 
 function App() {
   return (
-     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Deploy-work!
-        </p>
-      </header>
+    <div className="App">
+      <BonussCard />
     </div>
   );
 }
