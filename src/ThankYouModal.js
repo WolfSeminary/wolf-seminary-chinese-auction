@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 const ThankYouModal=()=> {
-  const rootRef = React.useRef(null);
-
+  const rootRef = useRef(null);
+ 
   return (
     <Box
       sx={{
