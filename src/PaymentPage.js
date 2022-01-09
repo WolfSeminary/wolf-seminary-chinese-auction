@@ -1,14 +1,15 @@
 import TotalPrice from "./TotalPrice";
 
 const PaymentPage = () => {
-    const [shouldShowThankYouModal, setShouldShowThankYouModal] = React.useState(true);
+    const [shouldShowThankYouModal, setShouldShowThankYouModal] = React.useState(false);
+
     return (<>
         {/* AppBar */}
         {/* Back to Prizes button */}
         <PricesTable />
         <TotalPrice />
         {/* Submit button */}
-        <ThankYouModal setShouldShowThankYouModal={setShouldShowThankYouModal} />
+        {shouldShowThankYouModal && <ThankYouModal setShouldShowThankYouModal={setShouldShowThankYouModal} />}
     </>);
 }
 
