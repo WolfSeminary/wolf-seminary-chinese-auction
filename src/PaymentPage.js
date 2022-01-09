@@ -1,14 +1,16 @@
 import AppBar from "./AppBar";
 
-function PaymentPage() {
+const PaymentPage = () => {
+    const [shouldShowThankYouModal, setShouldShowThankYouModal] = React.useState(true);
     return (<>
         {/* AppBar */}
         {/* Back to Prizes button */}
         <PricesTable />
         {/* TotalPrice */}
-        {/* Submit button */} 
-        <ThankYouModal />
+        {/* Submit button */}
+        <ThankYouModal setShouldShowThankYouModal={setShouldShowThankYouModal} />
     </>);
 }
+
 
 export default PaymentPage;

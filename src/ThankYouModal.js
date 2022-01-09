@@ -1,15 +1,13 @@
-import * as React from 'react';
+import React from 'react';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-const ThankYouModal = () => {
+const ThankYouModal = (props) => {
   const rootRef = React.useRef(null);
-  const [shouldShowThankYouModal, setShouldShowThankYouModal] = React.useState(true);
   function onCloseModal() {
-    setShouldShowThankYouModal(false);
+    props.setShouldShowThankYouModal(false);
   }
-
   return (
     <Box
       onClose={() => onCloseModal}
