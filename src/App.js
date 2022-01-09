@@ -1,4 +1,4 @@
-import './App.css';
+//import './App.css';
 import TotalPrice from './TotalPrice';
 import React from 'react';
 import BonussCard from './NoticeModal';
