@@ -4,6 +4,7 @@ import React from 'react';
 import BonussCard from './NoticeModal';
 
 
+
 function App() {
   return (
     <div className="App">
