@@ -9,7 +9,7 @@ const BackButton = () => {
     }
     return (
         <>
-            <Button onClick={backPrizes} >hello</Button>
+            <Button onClick={backPrizes} >back to prizes</Button>
             <Routes>
                 <Route path="Prize" element={<Prize />} />
             </Routes>
