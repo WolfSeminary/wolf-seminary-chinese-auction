@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import TotalPrice from './TotalPrice';
-
 import React from 'react';
+import BonussCard from './NoticeModal';
 
 function App() {
   return (
     <div className="App">
-     <TotalPrice/>
+      <BonussCard />
     </div>
   );
 }
