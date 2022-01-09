@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import shadows from '@mui/material/styles/shadows';
-
+import { Checkbox } from '@mui/material';
 
 const Prize = () => {
     return (
@@ -25,6 +25,7 @@ const Prize = () => {
                     prize price
                 </Typography>
             </CardContent>
+            <Checkbox style={{ display: 'flex' }}/>
         </Card>
     )
 }
