@@ -3,18 +3,21 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-const ThankYouModal=()=> {
+const ThankYouModal = () => {
   const rootRef = React.useRef(null);
+  const [shouldShowThankYouModal, setShouldShowThankYouModal] = React.useState(true);
+  function onCloseModal() {
+    setShouldShowThankYouModal(false);
+  }
 
   return (
     <Box
+      onClose={() => onCloseModal}
       sx={{
         height: 300,
         flexGrow: 1,
         minWidth: 300,
         transform: 'translateZ(0)',
-        // The position fixed scoping doesn't work in IE11.
-        // Disable this demo to preserve the others.
         '@media all and (-ms-high-contrast: none)': {
           display: 'none',
         },
@@ -47,14 +50,14 @@ const ThankYouModal=()=> {
           }}
         >
           <Typography id="server-modal-title" variant="h6" component="h2">
-          תזכו למצוות!
+            תזכו למצוות!
           </Typography>
           <Typography id="server-modal-description" sx={{ pt: 2 }}>
-          יישר כוח על השתתפותכם בהחזקת מפעל הבית של סמינר וולף
+            יישר כוח על השתתפותכם בהחזקת מפעל הבית של סמינר וולף
           </Typography>
         </Box>
       </Modal>
     </Box>
   );
 }
-export default  ThankYouModal
+export default ThankYouModal
