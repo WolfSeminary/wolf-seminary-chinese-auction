@@ -1,13 +1,11 @@
 
 import './App.css';
-import MyAppBar from './MyAppBar';
+import AppBarPage from './AppBarPage';
 
 function App() {
   return (
     <div className="App">
-
-      <MyAppBar />
-
+      <AppBarPage />
     </div>
 
   );
