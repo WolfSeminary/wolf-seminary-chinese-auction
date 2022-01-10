@@ -14,8 +14,7 @@ const Prize = () => {
                 height="140"
                 image=""
                 alt="prize image"
-            />
-            <CardContent>
+            /><CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                     prize title
                 </Typography>
