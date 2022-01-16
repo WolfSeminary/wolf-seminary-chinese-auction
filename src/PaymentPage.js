@@ -1,3 +1,4 @@
+import React from "react";
 import TotalPrice from "./TotalPrice";
 import SubmitButton from './SubmitButton'
 import PricesTable from './PricesTable'
