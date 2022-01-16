@@ -1,11 +1,11 @@
-
+import React from 'react';
 import './App.css';
-import BackButton from './button1';
+import BackButton from './BackButton';
 
 function App() {
   return (
     <div className="App">
-      <BackButton/>
+      <BackButton />
     </div>
   );
 }
