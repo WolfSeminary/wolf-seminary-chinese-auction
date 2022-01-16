@@ -6,7 +6,14 @@ import Typography from '@mui/material/Typography';
 import shadows from '@mui/material/styles/shadows';
 import { Checkbox } from '@mui/material';
 
-const Prize = () => {
+const Prize = (props) => {
+    function onSelectedPrizeChange(e){
+        let isChecked = e.target.checked;
+        if(e)
+    props.setNumOfSelectedPrizes(props.numOfSelectedPrizes+1)
+    else
+    props.setNumOfSelectedPrizes(props.numOfSelectedPrizes+1)
+    }
     return (
         <Card sx={{ maxWidth: 345 }} >
             <CardMedia
@@ -25,7 +32,7 @@ const Prize = () => {
                     prize price
                 </Typography>
             </CardContent>
-            <Checkbox style={{ display: 'flex' }}/>
+            <Checkbox style={{ display: 'flex' }} onChange={ onSelectedPrizeChange}/>
         </Card>
     )
 }
