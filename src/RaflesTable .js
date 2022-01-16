@@ -21,6 +21,8 @@ const RaflesTable = () => {
                     <TableRow
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
+                         <TableCell align="center">חדר ילדים</TableCell>
+                         <TableCell align="center"><button>הגרל</button></TableCell>
                     </TableRow>
                 </TableBody>
             </Table>
