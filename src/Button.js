@@ -12,10 +12,7 @@ const PayButton = () => {
         <Button onClick={() => { navigate("/PaymentPage") }}g>
             <KeyboardArrowLeftIcon ></KeyboardArrowLeftIcon>
             המשך לתשלום
-        </Button>
-        <Routes>
-            <Route path="PaymentPage" element={<PaymentPage />} />
-        </Routes>
+        </Button>       
     </>
     )
 }

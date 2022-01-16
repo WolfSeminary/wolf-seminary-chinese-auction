@@ -5,7 +5,10 @@ import BackButton from './BackButton';
 function App() {
   return (
     <div className="App">
-      <BackButton />
+      <Routes>
+        <Route path="Prize" element={<Prize />} />
+        <Route path="PaymentPage" element={<PaymentPage />} />
+      </Routes>
     </div>
   );
 }
