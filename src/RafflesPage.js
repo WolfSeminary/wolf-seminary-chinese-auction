@@ -6,7 +6,7 @@ const RafflesPage = () => {
     return (<>
         <AppBarPage></AppBarPage>
         <RaflesTable></RaflesTable>
-        {/* <Winner></Winner> */}
+        <Winner firstname={} lastName={} currentPrize={} ></Winner> 
     </>)
 }
 
