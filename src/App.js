@@ -1,6 +1,9 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import BackButton from './BackButton';
+import PaymentPage from './PaymentPage';
+import Prize from './Prize';
 
 function App() {
   return (
