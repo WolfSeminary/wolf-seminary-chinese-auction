@@ -1,12 +1,15 @@
-import React from 'react';
-import BonussCard from './NoticeModal';
-import PrizesPage from './PrizesPage';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      {/* <BonussCard /> */}
-      <PrizesPage />
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload. Deploy-work!
+        </p>
+      </header>
     </div>
   );
 }
