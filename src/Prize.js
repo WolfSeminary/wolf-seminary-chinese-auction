@@ -5,21 +5,23 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import shadows from '@mui/material/styles/shadows';
 import { Checkbox } from '@mui/material';
+import { useState } from 'react';
 
 const Prize = (props) => {
-    function onSelectedPrizeChange(e){
+
+    function onSelectedPrizeChange(e) {
         let isChecked = e.target.checked;
-        if(e)
-    props.setNumOfSelectedPrizes(props.numOfSelectedPrizes+1)
-    else
-    props.setNumOfSelectedPrizes(props.numOfSelectedPrizes+1)
+        if (isChecked)
+            props.setNumOfSelectedPrizes(props.numOfSelectedPrizes + 1)
+        else
+            props.setNumOfSelectedPrizes(props.numOfSelectedPrizes - 1)
     }
     return (
         <Card sx={{ maxWidth: 345 }} >
             <CardMedia
                 component="img"
                 height="140"
-                image=""
+                image={props.image}
                 alt="prize image"
             /><CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -32,7 +34,7 @@ const Prize = (props) => {
                     prize price
                 </Typography>
             </CardContent>
-            <Checkbox style={{ display: 'flex' }} onChange={ onSelectedPrizeChange}/>
+            <Checkbox style={{ display: 'flex' }} onChange={onSelectedPrizeChange} />
         </Card>
     )
 }

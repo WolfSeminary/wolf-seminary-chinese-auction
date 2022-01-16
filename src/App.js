@@ -1,11 +1,11 @@
 
 import './App.css';
-import BackButton from './button1';
-
+import Rect from 'react';
+import Prizes from './Prizes'
 function App() {
   return (
     <div className="App">
-      <BackButton/>
+      <Prizes/>
     </div>
   );
 }
