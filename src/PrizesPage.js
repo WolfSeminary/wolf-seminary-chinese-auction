@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import AppBAr from "./AppBar";
+import AppBar from "./AppBar";
 import ContinueToPayment from "./ContinueToPayment";
 import BonussCard from './NoticeModal';
 import Prizes from "./Prizes";
-import PrizesSum from "./PrizesSum";
+import PrizesSum from "./PrizesSum ";
 
 const PrizesPage = () => {
-  const [showNoticeModal, setShowNoticeModal] = useState(false);
+    const [showNoticeModal, setShowNoticeModal] = useState(false);
     return (
         <>
-            <AppBAr>
+            <AppBar>
                 <PrizesSum />
-            </AppBAr>
+            </AppBar>
             <Prizes />
             <ContinueToPayment />
-            {showNoticeModal && <  BonussCard/>}
+            {showNoticeModal && <  BonussCard />}
         </>
     )
 }
