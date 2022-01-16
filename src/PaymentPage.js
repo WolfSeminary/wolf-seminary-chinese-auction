@@ -10,7 +10,7 @@ const PaymentPage = () => {
     return (<>
         {/* AppBar */}
         {/* Back to Prizes button */}
-        <PricesTable />
+        {/* <PricesTable /> */}
         <TotalPrice />
         <SubmitButton setShouldShowThankYouModal={setShouldShowThankYouModal}/>
         {shouldShowThankYouModal && <ThankYouModal setShouldShowThankYouModal={setShouldShowThankYouModal} />}

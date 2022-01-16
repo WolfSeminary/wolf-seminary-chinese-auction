@@ -1,6 +1,6 @@
-import { TableContainer, TableCell, TableBody, TableHead, Table } from '@mui/material';
+import { TableContainer, TableCell, TableBody, TableHead, Table,TableRow } from '@mui/material';
 
-const PricesTable = () => {
+const PricesTable = (props) => {
     return (
         <TableContainer>
             <Table>
@@ -10,9 +10,12 @@ const PricesTable = () => {
                     <TableCell align="center">פריט</TableCell>
                 </TableHead>
                 <TableBody>
-                    <TableCell align="center">2000</TableCell>
-                    <TableCell align="center">2</TableCell>
-                    <TableCell align="center">חדר ילדים </TableCell>
+                    {props.prizes.map(item =>
+                        <TableRow key={item.id}>
+                            <TableCell align="center">{item.price}</TableCell>
+                            <TableCell align="center">{item.count}</TableCell>
+                            <TableCell align="center">{item.id}</TableCell>
+                        </TableRow>)}
                 </TableBody>
             </Table>
         </TableContainer>
