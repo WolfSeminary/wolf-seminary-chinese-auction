@@ -1,17 +1,19 @@
 import { Button } from "@mui/material"
 import { Route, Routes, useNavigate } from "react-router-dom"
-import Prize from "./Prize"
+import prizes from "./Prizes"
 
 const BackButton = () => {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
     const backPrizes = () => {
-        navigate("/Prize")
+        navigate("/Prizes")
     }
     return (
         <>
-            <Button onClick={backPrizes} >back to prizes</Button>
+            <Button variant="contained" startIcon={<ArrowBackIcon />} onClick={backPrizes} >
+                בחזרה לבחירת המתנות
+            </Button>
             <Routes>
-                <Route path="Prize" element={<Prize />} />
+                <Route path="Prizes" element={<Prizes />} />
             </Routes>
         </>
     )

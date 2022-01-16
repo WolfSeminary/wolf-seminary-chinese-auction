@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import shadows from '@mui/material/styles/shadows';
 import { Checkbox } from '@mui/material';
+import { Container, Row } from 'react-bootstrap';
 
 const Prize = () => {
     return (
@@ -25,7 +26,11 @@ const Prize = () => {
                     prize price
                 </Typography>
             </CardContent>
-            <Checkbox style={{ display: 'flex' }}/>
+            <Container>
+                <Row className="justify-content-md-center">
+                    <Checkbox />
+                </Row>
+            </Container>
         </Card>
     )
 }
