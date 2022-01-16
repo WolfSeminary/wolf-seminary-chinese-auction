@@ -5,7 +5,7 @@ import Prizes from './Prizes'
 function App() {
   return (
     <div className="App">
-      <Prizes/>
+      <Prizes />
     </div>
   );
 }

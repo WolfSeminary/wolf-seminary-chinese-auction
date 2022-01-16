@@ -95,14 +95,15 @@ const Prizes = () => {
 
    return (<>
       <Box sx={{ flexGrow: 1 }}>
-         {numOfSelectedPrizes}
+  <p>     {numOfSelectedPrizes}  מספר הפרסים שנבחרו</p>  
          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 4, md: 8 }}>
             {prizes.map((item, index) => (
-               <Grid item xs={2} sm={4} md={4} key={index}>
+               <Grid item xs={2} sm={4} md={4} key={item.ID}>
                   <Prize
                      image={item.image}
                      Id={item.ID}
                      name={item.name}
+                     price={item.price}
                      description={item.description}
                      numOfSelectedPrizes={numOfSelectedPrizes}
                      setNumOfSelectedPrizes={setNumOfSelectedPrizes} />

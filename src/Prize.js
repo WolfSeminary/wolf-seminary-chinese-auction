@@ -25,13 +25,13 @@ const Prize = (props) => {
                 alt="prize image"
             /><CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    prize title
+                    {props.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    prize details
+                {props.description}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    prize price
+                ש"ח    {props.price}
                 </Typography>
             </CardContent>
             <Checkbox style={{ display: 'flex' }} onChange={onSelectedPrizeChange} />
