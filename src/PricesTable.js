@@ -1,4 +1,5 @@
 
+
 import { TableContainer, TableCell, TableBody, TableHead, Table, TableRow, Button } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useState } from 'react';
@@ -30,6 +31,9 @@ const PricesTable = (props) => {
         const all=[...prizes]
         setPrizes(all.sort((s1, s2) => s1.name.localeCompare(s2.name)))
     }
+
+
+const PricesTable = (props) => {
     return (
         <TableContainer>
             <Table>
@@ -45,11 +49,13 @@ const PricesTable = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {prizes.map((item) =>
+
+                    {props.prizes.map(item =>
                         <TableRow key={item.id}>
                             <TableCell align="center">{item.price}</TableCell>
                             <TableCell align="center">{item.count}</TableCell>
-                            <TableCell align="center">{item.name}</TableCell>
+                            <TableCell align="center">{item.id}</TableCell>
+
                         </TableRow>)}
                 </TableBody>
             </Table>

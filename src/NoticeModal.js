@@ -3,10 +3,14 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-const BonussCard = () => {
+const BonussCard = (props) => {
   const rootRef = React.useRef(null);
+  function onCloseModal() {
+    props.showNoticeModal(false);
+  }
   return (
     <Box
+  
       sx={{
         height: 300,
         flexGrow: 1,
@@ -19,6 +23,10 @@ const BonussCard = () => {
       ref={rootRef}
     >
       <Modal
+<<<<<<< HEAD
+=======
+        onClose={() => onCloseModal}
+>>>>>>> origin/main
         disablePortal
         disableEnforceFocus
         disableAutoFocus
