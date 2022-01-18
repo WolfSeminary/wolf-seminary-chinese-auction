@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 const BonussCard = (props) => {
   const rootRef = React.useRef(null);
   function onCloseModal() {
-    props.SetshouldShowNoticeModal(false);
+    props.showNoticeModal(false);
   }
   return (
     <Box
@@ -23,7 +23,10 @@ const BonussCard = (props) => {
       ref={rootRef}
     >
       <Modal
+<<<<<<< HEAD
+=======
         onClose={() => onCloseModal}
+>>>>>>> origin/main
         disablePortal
         disableEnforceFocus
         disableAutoFocus
