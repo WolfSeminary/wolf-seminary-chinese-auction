@@ -1,11 +1,14 @@
 import BonussCard from "./NoticeModal"
+import React,{useState} from "react";
 const PrizesPage = () => {
     const [shouldShowNoticeModal, SetshouldShowNoticeModal] = useState(false)
-    return (
+    return (<>
         // AppBar
         // PrizesSum - Should be added within the app bar component
         // Prizes
         // ContinueToPayment
-        shouldShowNoticeModal && <BonussCard />)
+        
+        <BonussCard SetshouldShowNoticeModal={SetshouldShowNoticeModal} />
+        </>);
 }
 export default PrizesPage
