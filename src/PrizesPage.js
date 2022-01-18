@@ -6,7 +6,7 @@ const PrizesPage = () => {
         // PrizesSum - Should be added within the app bar component
         // Prizes
         // ContinueToPayment
-        shouldShowNoticeModal && <BonussCard />
+        {shouldShowNoticeModal && <BonussCard />}
         <NoticeModal SetshouldShowNoticeModal={SetshouldShowNoticeModal} />
         </>);
 }
