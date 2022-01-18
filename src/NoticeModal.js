@@ -23,7 +23,10 @@ const BonussCard = (props) => {
       ref={rootRef}
     >
       <Modal
+<<<<<<< HEAD
+=======
         onClose={() => onCloseModal}
+>>>>>>> origin/main
         disablePortal
         disableEnforceFocus
         disableAutoFocus
