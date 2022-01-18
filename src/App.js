@@ -3,13 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import BackButton from './BackButton';
 import PaymentPage from './PaymentPage';
-import Prize from './Prize';
+import Prizes from './Prizes';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="Prize" element={<Prize />} />
+        <Route path="Prizes" element={<Prizes />} />
         <Route path="PaymentPage" element={<PaymentPage />} />
       </Routes>
     </div>
