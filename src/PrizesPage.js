@@ -14,7 +14,7 @@ const PrizesPage = () => {
             </AppBar>
             <Prizes />
             <ContinueToPayment />
-            {showNoticeModal && <  BonussCard />}
+            {showNoticeModal && <BonussCard showNoticeModal={setShowNoticeModal} />}
         </>
     )
 }
