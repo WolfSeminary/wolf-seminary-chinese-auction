@@ -1,5 +1,6 @@
 import { Button } from "@mui/material"
-import { Route, Routes, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import ArrowBack from '@mui/icons-material/ArrowBack';
 
 const BackButton = () => {
     const navigate = useNavigate();
@@ -7,11 +8,11 @@ const BackButton = () => {
         navigate("/Prizes")
     }
     return (
-        <>
-            <Button variant="contained" startIcon={<ArrowBackIcon />} onClick={backPrizes} >
-                בחזרה לבחירת המתנות
-            </Button>
-        </>
+         <>
+             <Button variant="contained" startIcon={<ArrowBack />} onClick={backPrizes} >
+                 בחזרה לבחירת המתנות
+             </Button>
+         </>
     )
 }
 export default BackButton
