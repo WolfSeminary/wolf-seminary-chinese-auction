@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-const RaflesTable = () => {
+const RaflesTable = (props) => {
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -18,12 +18,12 @@ const RaflesTable = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    <TableRow
-                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                    >
-                         <TableCell align="center"><button>הגרל</button></TableCell>
-                         <TableCell align="center">חדר ילדים</TableCell>
-                    </TableRow>
+                    {props.prizes.map(prize =>
+                        <TableRow key={prize.ID} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                            <TableCell align="center"><button>הגרל</button></TableCell>
+                            <TableCell align="center">{prize.name}</TableCell>
+                        </TableRow>
+                    )}
                 </TableBody>
             </Table>
         </TableContainer>
