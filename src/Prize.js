@@ -5,13 +5,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import shadows from '@mui/material/styles/shadows';
 import { Checkbox } from '@mui/material';
-import { Container, Row } from 'react-bootstrap';
 
 const Prize = (props) => {
     const [isSelected,setIsSelected]=useState(false);
     const onSelectedPrizeChange=()=>{
-    props.SelectedPrize=props.prize;
-    // השורה הקודמת אמורה לשים במשתנה באבא את בחירת הפרס בקומפוננטה זו
+
+ 
     }
     return (
         <Card sx={{ maxWidth: 345 }} >
@@ -31,15 +30,11 @@ const Prize = (props) => {
                     prize price
                 </Typography>
             </CardContent>
-<<<<<<< HEAD
-            <Checkbox onChange={onSelectedPrizeChange} style={{ display: 'flex' }}/>
-=======
-            <Container>
+           <Container>
                 <Row className="justify-content-md-center">
-                    <Checkbox />
+                    <Checkbox  onChange={onSelectedPrizeChange}/>
                 </Row>
             </Container>
->>>>>>> origin/main
         </Card>
     )
 }
