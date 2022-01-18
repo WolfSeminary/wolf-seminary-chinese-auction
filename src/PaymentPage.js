@@ -1,4 +1,3 @@
-
 import TotalPrice from "./TotalPrice";
 import SubmitButton from './SubmitButton'
 import PricesTable from './PricesTable'
@@ -6,6 +5,7 @@ import ThankYouModal from './ThankYouModal'
 import React, { useState } from "react";
 import AppBAr from "./AppBar";
 import BackButton from './BackButton'
+
 const PaymentPage = () => {
     const [shouldShowThankYouModal, setShouldShowThankYouModal] = useState(false);
     let prizes = [
