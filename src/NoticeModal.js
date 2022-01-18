@@ -10,7 +10,7 @@ const BonussCard = (props) => {
   }
   return (
     <Box
-    onClose={() => onCloseModal}
+  
       sx={{
         height: 300,
         flexGrow: 1,
@@ -23,6 +23,7 @@ const BonussCard = (props) => {
       ref={rootRef}
     >
       <Modal
+        onClose={() => onCloseModal}
         disablePortal
         disableEnforceFocus
         disableAutoFocus
