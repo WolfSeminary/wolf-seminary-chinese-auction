@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { TextField } from '@mui/material';
 
 const ThankYouModal = (props) => {
   const rootRef = React.useRef(null);
@@ -53,6 +54,9 @@ const ThankYouModal = (props) => {
           <Typography id="server-modal-description" sx={{ pt: 2 }}>
             יישר כוח על השתתפותכם בהחזקת מפעל הבית של סמינר וולף
           </Typography>
+          <Typography>על מנת לשמור את נתוניך לצורך עריכת ההגרלות, נא הזן את הפרטים הבאים</Typography>
+          <TextField label="שם פרטי"></TextField>
+          <TextField label="שם משפחה"></TextField>
         </Box>
       </Modal>
     </Box>
