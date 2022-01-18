@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 const BonussCard = (props) => {
   const rootRef = React.useRef(null);
   function onCloseModal() {
-    props.SetshouldShowNoticeModal(false);
+    props.showNoticeModal(false);
   }
   return (
     <Box
