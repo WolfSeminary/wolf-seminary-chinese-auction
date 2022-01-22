@@ -107,12 +107,10 @@ const Prizes = () => {
    const [isSelectedPrize, setisSelectedPrize] = useState(0);
    const [isSelectedBool, setisSelectedBool] = useState(false);
    useEffect(() => {
-      if (isSelectedPrize != -1) {
-         prizes.map((item) => (
-            isSelectedPrize == item.ID ? (item.isSelected == true ? item.isSelected = false : item.isSelected = true) : item.isSelected = item.isSelected
-         ))
-         console.log(prizes)
-      }
+      prizes.map((item) => (
+         isSelectedPrize == item.ID ? (item.isSelected == true ? item.isSelected = false : item.isSelected = true) : item.isSelected = item.isSelected
+      ))
+      console.log(prizes)
    }, [isSelectedPrize, , isSelectedBool]);
    return (<>
       <Box sx={{ flexGrow: 1 }}>
