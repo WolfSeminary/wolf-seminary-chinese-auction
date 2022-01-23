@@ -5,9 +5,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import shadows from '@mui/material/styles/shadows';
 import { Checkbox } from '@mui/material';
-import { Container, Row } from 'react-bootstrap';
+// import { Container, Row } from 'react-bootstrap';
 
 const Prize = (props) => {
+    const [isSelected, setIsSelected] = useState(false);
     const onSelectedPrizeChange = (e) => {
         let isChecked = e.target.checked;
         props.changeSelectedPrize(props.Id);
@@ -34,11 +35,14 @@ const Prize = (props) => {
                     ש"ח    {props.price}
                 </Typography>
             </CardContent>
-           <Container>
+            {/* <Container>
                 <Row className="justify-content-md-center">
-                    <Checkbox  onChange={onSelectedPrizeChange}/>
+                    <Checkbox onChange={onSelectedPrizeChange} />
                 </Row>
-            </Container>
+            </Container> */}
+
+            <Checkbox onChange={onSelectedPrizeChange} />
+
         </Card>
     )
 }

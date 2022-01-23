@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Prize from './Prize'
+import RafflesPage from './RafflesPage'
 
 const Prizes = () => {
    let [prizes, setPrizes] = useState(
@@ -134,6 +135,7 @@ const Prizes = () => {
             ))}
          </Grid>
       </Box>
+      <RafflesPage prizes={prizes}></RafflesPage>
    </>);
 }
 
