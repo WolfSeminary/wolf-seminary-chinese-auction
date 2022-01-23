@@ -3,7 +3,7 @@ import SubmitButton from './SubmitButton'
 import PricesTable from './PricesTable'
 import ThankYouModal from './ThankYouModal'
 import React, { useState } from "react";
-import AppBAr from "./AppBar";
+import AppBAr from "./AppBarPage";
 import BackButton from './BackButton'
 
 const PaymentPage = () => {
