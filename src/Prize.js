@@ -4,7 +4,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import shadows from '@mui/material/styles/shadows';
-import { Checkbox, Container } from '@mui/material';
+import { Checkbox } from '@mui/material';
+import { Container, Row } from 'react-bootstrap';
 
 const Prize = (props) => {
     const onSelectedPrizeChange = (e) => {
