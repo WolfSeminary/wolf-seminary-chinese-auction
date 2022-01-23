@@ -7,7 +7,7 @@ import shadows from '@mui/material/styles/shadows';
 import { Checkbox, Container } from '@mui/material';
 
 const Prize = (props) => {
- const onSelectedPrizeChange = (e) => {
+    const onSelectedPrizeChange = (e) => {
         let isChecked = e.target.checked;
         props.changeSelectedPrize(props.Id);
         if (isChecked)
@@ -17,7 +17,7 @@ const Prize = (props) => {
     }
     return (
         <Card sx={{ maxWidth: 345 }} >
-              <CardMedia
+            <CardMedia
                 component="img"
                 height="140"
                 image={props.image}
