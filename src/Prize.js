@@ -33,12 +33,11 @@ const Prize = (props) => {
                     ש"ח    {props.price}
                 </Typography>
             </CardContent>
-            <Container>
-                {/* <Row className="justify-content-md-center"> */}
-                <Checkbox onChange={onSelectedPrizeChange} />
-                {/* </Row> */}
+           <Container>
+                <Row className="justify-content-md-center">
+                    <Checkbox  onChange={onSelectedPrizeChange}/>
+                </Row>
             </Container>
-
         </Card>
     )
 }

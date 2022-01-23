@@ -1,4 +1,4 @@
-# WolfChineseAuction
+# wolf-seminary-chinese-auction
 
 ### Prizes Page:👇
 

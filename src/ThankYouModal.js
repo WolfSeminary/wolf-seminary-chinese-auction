@@ -1,22 +1,21 @@
-import React from 'react';
+import * as React from 'react';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { TextField } from '@mui/material';
 
-const ThankYouModal = (props) => {
+const ThankYouModal=()=> {
   const rootRef = React.useRef(null);
-  function onCloseModal() {
-    props.setShouldShowThankYouModal(false);
-  }
+
   return (
     <Box
-      onClose={() => onCloseModal}
       sx={{
         height: 300,
         flexGrow: 1,
         minWidth: 300,
         transform: 'translateZ(0)',
+        // The position fixed scoping doesn't work in IE11.
+        // Disable this demo to preserve the others.
         '@media all and (-ms-high-contrast: none)': {
           display: 'none',
         },
@@ -49,10 +48,10 @@ const ThankYouModal = (props) => {
           }}
         >
           <Typography id="server-modal-title" variant="h6" component="h2">
-            תזכו למצוות!
+          תזכו למצוות!
           </Typography>
           <Typography id="server-modal-description" sx={{ pt: 2 }}>
-            יישר כוח על השתתפותכם בהחזקת מפעל הבית של סמינר וולף
+          יישר כוח על השתתפותכם בהחזקת מפעל הבית של סמינר וולף
           </Typography>
           <Typography>על מנת לשמור את נתוניך לצורך עריכת ההגרלות, נא הזן את הפרטים הבאים</Typography>
           <TextField label="שם פרטי"></TextField>
@@ -62,4 +61,4 @@ const ThankYouModal = (props) => {
     </Box>
   );
 }
-export default ThankYouModal
+export default  ThankYouModal
