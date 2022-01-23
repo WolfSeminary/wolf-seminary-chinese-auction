@@ -69,7 +69,7 @@ const ThankYouModal = () => {
           <Typography>על מנת לשמור את נתוניך לצורך עריכת ההגרלות, נא הזן את הפרטים הבאים</Typography>
           <TextField label="שם פרטי" onChange={updateFirstName}></TextField>
           <TextField label="שם משפחה" onChange={updateLastName}></TextField>
-          <button onClick={onCloseModal}>gf</button>
+          <button onClick={onCloseModal}>שמור פרטים</button>
         </Box>
       </Modal>
     </Box>
