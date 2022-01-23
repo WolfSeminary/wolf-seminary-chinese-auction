@@ -16,7 +16,7 @@ const Prize = (props) => {
             props.setNumOfSelectedPrizes(props.numOfSelectedPrizes - 1)
     }
     return (
-        <Card sx={{ maxWidth: 345 }} >
+        <Card sx={{ maxWidth: 345 }} style={{textAlign:"center"}}>
             <CardMedia
                 component="img"
                 height="140"
