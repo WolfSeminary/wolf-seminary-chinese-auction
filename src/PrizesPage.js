@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-import AppBar from "./AppBar";
+import AppBarPage from "./AppBarPage";
 import ContinueToPayment from "./ContinueToPayment";
 import BonussCard from './NoticeModal';
 import Prizes from "./Prizes";
-import PrizesSum from './PrizesSum'
 
 const PrizesPage = () => {
     const [showNoticeModal, setShowNoticeModal] = useState(false);
+    const [numOfSelectedPrizes, setNumOfSelectedPrizes] = useState(0);
     return (
-        <><AppBar>
-            <PrizesSum />
-        </AppBar>
-            <Prizes setShowNoticeModal={setShowNoticeModal} />
+        <>
+            <AppBarPage numOfSelectedPrizes={numOfSelectedPrizes}/>
+            <Prizes numOfSelectedPrizes={numOfSelectedPrizes} setNumOfSelectedPrizes={setNumOfSelectedPrizes} setShowNoticeModal={setShowNoticeModal}  />
             <ContinueToPayment />
             {showNoticeModal && <BonussCard showNoticeModal={setShowNoticeModal} />}
         </>

@@ -5,7 +5,6 @@ import Prize from './Prize'
 import RafflesPage from './RafflesPage'
 
 const Prizes = (props) => {
-   const [numOfSelectedPrizes, setNumOfSelectedPrizes] = useState(0);
    const [numOf5nisPrizes, setNumOf5nisPrizes] = useState(0);
    const [numOf10nisPrizes, setNumOf10nisPrizes] = useState(0);
    const [numOf20nisPrizes, setNumOf20nisPrizes] = useState(0);
@@ -94,7 +93,7 @@ const Prizes = (props) => {
          , {
             ID: 11,
             name: "אורגית",
-            image: "./images/Pcomputer.jpg",
+            image: "./images/Porg2.jpg",
             description: "אורגנית איכותית",
             price: 5,
             isSelected: false
@@ -149,16 +148,16 @@ const Prizes = (props) => {
                      name={item.name}
                      price={item.price}
                      description={item.description}
-                     numOfSelectedPrizes={numOfSelectedPrizes}
+                     numOfSelectedPrizes={props.numOfSelectedPrizes}
                      isSelected={item.isSelected}
-                     setNumOfSelectedPrizes={setNumOfSelectedPrizes}
+                     setNumOfSelectedPrizes={props.setNumOfSelectedPrizes}
                      changeSelectedPrize={changeSelectedPrize}
                   />
                </Grid>
             ))}
          </Grid>
       </Box>
-      <RafflesPage prizes={prizes}></RafflesPage>
+      <RafflesPage prizes={prizes}/>
    </>);
 }
 
