@@ -9,9 +9,10 @@ const PrizesPage = () => {
     const [showNoticeModal, setShowNoticeModal] = useState(false);
     return (
         <>
-            <AppBarPage>
-                {/* <PrizesSum /> */}
-            </AppBarPage>
+            {/* <AppBarPage>
+                <PrizesSum />
+            </AppBarPage> */}
+          
             <Prizes />
             <ContinueToPayment />
             {showNoticeModal && <BonussCard showNoticeModal={setShowNoticeModal} />}
