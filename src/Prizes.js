@@ -112,6 +112,12 @@ const Prizes = () => {
       ))
       console.log(prizes)
    }, [isSelectedPrize, , isSelectedBool]);
+   const funcSelectedPrize=()=>{
+      prizes.map((item) => (
+         isSelectedPrize == item.ID ? (item.isSelected == true ? item.isSelected = false : item.isSelected = true) : item.isSelected = item.isSelected
+      ))
+      console.log(prizes)
+   }
    return (<>
       <Box sx={{ flexGrow: 1 }}>
          <p>     {numOfSelectedPrizes}  מספר הפרסים שנבחרו</p>

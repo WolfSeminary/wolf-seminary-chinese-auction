@@ -10,7 +10,8 @@ const Prize = (props) => {
  const onSelectedPrizeChange = (e) => {
         let isChecked = e.target.checked;
         props.setisSelectedPrize(props.Id)
-        props.setisSelectedBool(isChecked);
+        props.funcSelectedPrize();
+        // props.setisSelectedBool(isChecked);
         if (isChecked)
             props.setNumOfSelectedPrizes(props.numOfSelectedPrizes + 1)
         else
