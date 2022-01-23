@@ -30,11 +30,11 @@ const Prize = (props) => {
                     prize price
                 </Typography>
             </CardContent>
-           <Container>
+           {/* <Container>
                 <Row className="justify-content-md-center">
                     <Checkbox  onChange={onSelectedPrizeChange}/>
                 </Row>
-            </Container>
+            </Container> */}
         </Card>
     )
 }
