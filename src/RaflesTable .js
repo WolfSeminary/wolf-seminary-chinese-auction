@@ -11,12 +11,12 @@ const RaflesTable = (props) => {
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
+                {/* <TableHead>
                     <TableRow>
                         <TableCell align="center">הגרל</TableCell>
                         <TableCell align="center">פריט</TableCell>
                     </TableRow>
-                </TableHead>
+                </TableHead> */}
                 <TableBody>
                     {props.prizes.map(prize =>
                         <TableRow key={prize.ID} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
