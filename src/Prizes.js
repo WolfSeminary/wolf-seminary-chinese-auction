@@ -108,8 +108,6 @@ const Prizes = (props) => {
          }
       ]
    )
-
-
    const changeSelectedPrize = (id) => {
       prizes.map((item) => {
          if (id == item.ID) {
