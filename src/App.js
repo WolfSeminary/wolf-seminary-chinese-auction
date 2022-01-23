@@ -2,14 +2,14 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import PaymentPage from './PaymentPage';
-import Prizes from './Prizes'
+import prizes from './Prizes'
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="Prizes" element={<Prizes />} />
-        <Route path="PaymentPage" element={<PaymentPage />} />
+        <Route path="PaymentPage" element={<PaymentPage prizes={prizes}></PaymentPage>} />
       </Routes>
     </div>
   );
