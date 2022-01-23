@@ -4,10 +4,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Checkbox } from '@mui/material';
-<<<<<<< HEAD
-//import { Container, Row } from 'react-bootstrap';
-=======
->>>>>>> origin/main
 
 const Prize = (props) => {
     const [isSelected, setIsSelected] = useState(false);
@@ -37,12 +33,6 @@ const Prize = (props) => {
                     ש"ח    {props.price}
                 </Typography>
             </CardContent>
-           {/* <Container>
-                <Row className="justify-content-md-center">
-                    <Checkbox  onChange={onSelectedPrizeChange}/>
-                </Row>
-            </Container> */}
-              <Checkbox  onChange={onSelectedPrizeChange}/>
             <Checkbox onChange={onSelectedPrizeChange} />
 
         </Card>
