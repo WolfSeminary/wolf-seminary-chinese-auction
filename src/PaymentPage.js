@@ -3,13 +3,13 @@ import SubmitButton from './SubmitButton'
 import PricesTable from './PricesTable'
 import ThankYouModal from './ThankYouModal'
 import React, { useState } from "react";
-import AppBAr from "./AppBarPage";
 import BackButton from './BackButton'
+import AppBarPage from "./AppBarPage";
 
 const PaymentPage = (props) => {
     const [shouldShowThankYouModal, setShouldShowThankYouModal] = useState(false);
     return (<>
-        <AppBAr></AppBAr>
+     <AppBarPage/>
         <BackButton></BackButton>
         <PricesTable prizes={props.prizes} />
         <TotalPrice />
