@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import shadows from '@mui/material/styles/shadows';
 import { Checkbox } from '@mui/material';
+import { Container, Row } from 'react-bootstrap';
 
 const Prize = (props) => {
     const [isSelected,setIsSelected]=useState(false);
