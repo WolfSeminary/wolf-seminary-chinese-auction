@@ -1,8 +1,8 @@
 import React from "react";
 import AppBarPage from "./AppBarPage";
-import RaflesTable from RaflesTable
+import RaflesTable from './RaflesTable'
 
-const RafflesPage = () => {
+const RafflesPage = (props) => {
     return (<>
         <AppBarPage></AppBarPage>
         <RaflesTable></RaflesTable>
