@@ -12,6 +12,7 @@ function App() {
         <Route path="Prizes" element={<Prizes />} />
         <Route path="PaymentPage" element={<PaymentPage />} />
       </Routes>
+      <Prizes/>
     </div>
   );
 }

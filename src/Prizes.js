@@ -105,22 +105,24 @@ const Prizes = () => {
    )
    const [numOfSelectedPrizes, setNumOfSelectedPrizes] = useState(0);
    const [isSelectedPrize, setisSelectedPrize] = useState(0);
-   const [isSelectedBool, setisSelectedBool] = useState(false);
-   useEffect(() => {
-      prizes.map((item) => (
-         isSelectedPrize == item.ID ? (item.isSelected == true ? item.isSelected = false : item.isSelected = true) : item.isSelected = item.isSelected
-      ))
-      console.log(prizes)
-   }, [isSelectedPrize, , isSelectedBool]);
-   const funcSelectedPrize=()=>{
-      prizes.map((item) => (
-         isSelectedPrize == item.ID ? (item.isSelected == true ? item.isSelected = false : item.isSelected = true) : item.isSelected = item.isSelected
-      ))
-      console.log(prizes)
-   }
+   const [isSelectedBool, setisSelectedBool] = useState(false)
+
+//   useEffect(() => {
+//  prizes.map((item) => (
+//             isSelectedPrize == item.ID ? (item.isSelected == true ? item.isSelected = false : item.isSelected = true) : item.isSelected = item.isSelected
+//          ))
+//          console.log(prizes)
+//   }, [isSelectedPrize, , isSelectedBool]);
+
+  const  changeSelectedPrize=(id)=>{
+   prizes.map((item) => {
+      if(id == item.ID)
+              item.isSelected = !item.isSelected;
+   })
+         console.log(prizes)
+  }
    return (<>
       <Box sx={{ flexGrow: 1 }}>
-         <p>     {numOfSelectedPrizes}  מספר הפרסים שנבחרו</p>
          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 4, md: 8 }}>
             {prizes.map((item, index) => (
                <Grid item xs={2} sm={4} md={4} key={item.ID}>
@@ -132,9 +134,8 @@ const Prizes = () => {
                      description={item.description}
                      numOfSelectedPrizes={numOfSelectedPrizes}
                      isSelected={item.isSelected}
-                     setisSelectedPrize={setisSelectedPrize}
                      setNumOfSelectedPrizes={setNumOfSelectedPrizes}
-                     setisSelectedBool={setisSelectedBool}
+                     changeSelectedPrize={changeSelectedPrize}
                   />
                </Grid>
             ))}

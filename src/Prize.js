@@ -9,9 +9,7 @@ import { Checkbox, Container } from '@mui/material';
 const Prize = (props) => {
  const onSelectedPrizeChange = (e) => {
         let isChecked = e.target.checked;
-        props.setisSelectedPrize(props.Id)
-        props.funcSelectedPrize();
-        // props.setisSelectedBool(isChecked);
+        props.changeSelectedPrize(props.Id);
         if (isChecked)
             props.setNumOfSelectedPrizes(props.numOfSelectedPrizes + 1)
         else
@@ -35,7 +33,6 @@ const Prize = (props) => {
                     ש"ח    {props.price}
                 </Typography>
             </CardContent>
-
             <Container>
                 {/* <Row className="justify-content-md-center"> */}
                 <Checkbox onChange={onSelectedPrizeChange} />
