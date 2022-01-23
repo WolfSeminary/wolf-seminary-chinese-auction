@@ -93,7 +93,7 @@ const Prizes = (props) => {
          , {
             ID: 11,
             name: "אורגית",
-            image: "./images/Pcomputer.jpg",
+            image: "./images/Porg2.jpg",
             description: "אורגנית איכותית",
             price: 5,
             isSelected: false
@@ -157,7 +157,7 @@ const Prizes = (props) => {
             ))}
          </Grid>
       </Box>
-      <RafflesPage prizes={prizes}></RafflesPage>
+      <RafflesPage prizes={prizes}/>
    </>);
 }
 
