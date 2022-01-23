@@ -3,11 +3,14 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import shadows from '@mui/material/styles/shadows';
 import { Checkbox } from '@mui/material';
+<<<<<<< HEAD
 //import { Container, Row } from 'react-bootstrap';
+=======
+>>>>>>> origin/main
 
 const Prize = (props) => {
+    const [isSelected, setIsSelected] = useState(false);
     const onSelectedPrizeChange = (e) => {
         let isChecked = e.target.checked;
         props.changeSelectedPrize(props.Id);
@@ -40,6 +43,8 @@ const Prize = (props) => {
                 </Row>
             </Container> */}
               <Checkbox  onChange={onSelectedPrizeChange}/>
+            <Checkbox onChange={onSelectedPrizeChange} />
+
         </Card>
     )
 }
