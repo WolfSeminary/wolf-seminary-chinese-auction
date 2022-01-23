@@ -32,8 +32,6 @@ const PricesTable = (props) => {
         setPrizes(all.sort((s1, s2) => s1.name.localeCompare(s2.name)))
     }
 
-
-const PricesTable = (props) => {
     return (
         <TableContainer>
             <Table>
