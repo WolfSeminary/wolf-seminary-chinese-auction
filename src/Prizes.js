@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Prize from './Prize'
 
-const Prizes = () => {
+const Prizes = (props) => {
    let [prizes, setPrizes] = useState(
       [
          {
@@ -104,7 +104,7 @@ const Prizes = () => {
          }
       ]
    )
-   const [numOfSelectedPrizes, setNumOfSelectedPrizes] = useState(0);
+
    const [isSelectedPrize, setisSelectedPrize] = useState(0);
    const [isSelectedBool, setisSelectedBool] = useState(false)
    const changeSelectedPrize = (id) => {
@@ -125,9 +125,9 @@ const Prizes = () => {
                      name={item.name}
                      price={item.price}
                      description={item.description}
-                     numOfSelectedPrizes={numOfSelectedPrizes}
+                     numOfSelectedPrizes={props.numOfSelectedPrizes}
                      isSelected={item.isSelected}
-                     setNumOfSelectedPrizes={setNumOfSelectedPrizes}
+                     setNumOfSelectedPrizes={props.setNumOfSelectedPrizes}
                      changeSelectedPrize={changeSelectedPrize}
                   />
                </Grid>
