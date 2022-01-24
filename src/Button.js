@@ -9,10 +9,10 @@ import PaymentPage from './PaymentPage';
 const PayButton = () => {
     let navigate = useNavigate();
     return (<>
-        <Button onClick={() => { navigate("/PaymentPage") }}g>
+        <Button onClick={() => { navigate("/PaymentPage") }}>
             <KeyboardArrowLeftIcon ></KeyboardArrowLeftIcon>
             המשך לתשלום
-        </Button>       
+        </Button>
     </>
     )
 }

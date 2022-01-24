@@ -5,6 +5,7 @@ import ThankYouModal from './ThankYouModal'
 import React, { useState } from "react";
 import BackButton from './BackButton'
 import AppBarPage from "./AppBarPage";
+import { prizesArray } from './Prizes'
 
 const PaymentPage = (props) => {
     const [shouldShowThankYouModal, setShouldShowThankYouModal] = useState(false);
@@ -12,7 +13,7 @@ const PaymentPage = (props) => {
         <AppBarPage />
         <BackButton />
         <PricesTable prizes={props.prizes} />
-        <TotalPrice />
+        <TotalPrice prizes={prizesArray} />
         <SubmitButton setShouldShowThankYouModal={setShouldShowThankYouModal} />
         {shouldShowThankYouModal && <ThankYouModal setShouldShowThankYouModal={setShouldShowThankYouModal} />}
     </>);

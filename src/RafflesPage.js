@@ -1,7 +1,7 @@
 import React from "react";
 import AppBarPage from "./AppBarPage";
 import Winner from './Winner'
-import RafflesTable from "./RaflesTable ";
+import RafflesTable from "./RafflesTable ";
 const RafflesPage = (props) => {
     return (<>
         <AppBarPage/>

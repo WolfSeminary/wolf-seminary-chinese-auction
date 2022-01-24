@@ -47,15 +47,18 @@ const PricesTable = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.prizes.map(item =>
-                        <TableRow key={item.id}>
+                    {props.prizes.map(item => {
+                        return
+                        < TableRow key={item.id} >
                             <TableCell align="center">{item.price}</TableCell>
                             <TableCell align="center">{item.count}</TableCell>
                             <TableCell align="center">{item.id}</TableCell>
-                        </TableRow>)}
+                        </TableRow>
+                    }
+                    )}
                 </TableBody>
             </Table>
-        </TableContainer>
+        </TableContainer >
     )
 }
 export default PricesTable
