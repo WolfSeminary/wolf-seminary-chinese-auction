@@ -9,8 +9,8 @@ import AppBarPage from "./AppBarPage";
 const PaymentPage = (props) => {
     const [shouldShowThankYouModal, setShouldShowThankYouModal] = useState(false);
     return (<>
-     <AppBarPage/>
-        <BackButton></BackButton>
+        <AppBarPage />
+        <BackButton />
         <PricesTable prizes={props.prizes} />
         <TotalPrice />
         <SubmitButton setShouldShowThankYouModal={setShouldShowThankYouModal} />
