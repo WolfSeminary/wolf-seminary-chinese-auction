@@ -7,7 +7,6 @@ import RafflesPage from './RafflesPage'
 const prizesContext = createContext();
 
 const Prizes = (props) => {
-   const [numOfSelectedPrizes, setNumOfSelectedPrizes] = useState(0);
    const [numOf5nisPrizes, setNumOf5nisPrizes] = useState(0);
    const [numOf10nisPrizes, setNumOf10nisPrizes] = useState(0);
    const [numOf20nisPrizes, setNumOf20nisPrizes] = useState(0);
@@ -52,16 +51,16 @@ const Prizes = (props) => {
                      name={item.name}
                      price={item.price}
                      description={item.description}
-                     numOfSelectedPrizes={numOfSelectedPrizes}
+                     numOfSelectedPrizes={props.numOfSelectedPrizes}
                      isSelected={item.isSelected}
-                     setNumOfSelectedPrizes={setNumOfSelectedPrizes}
+                     setNumOfSelectedPrizes={props.setNumOfSelectedPrizes}
                      changeSelectedPrize={changeSelectedPrize}
                   />
                </Grid>
             ))}
          </Grid>
       </Box>
-      <RafflesPage prizes={prizes}></RafflesPage>
+      <RafflesPage prizes={prizes}/>
    </>);
 }
 

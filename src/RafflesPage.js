@@ -1,14 +1,12 @@
-import React from "react"
-import AppBar from './AppBar'
-// import RafflesTable from './RafflesTable'
+import React from "react";
+import AppBarPage from "./AppBarPage";
 import Winner from './Winner'
-
+import RafflesTable from "./RaflesTable ";
 const RafflesPage = (props) => {
     return (<>
-        <AppBar></AppBar>
-        {/* <RafflesTable></RafflesTable> */}
-        {/* <Winner firstname={} lastName={} currentPrize={} ></Winner>  */}
-        <Winner></Winner>
+        <AppBarPage/>
+        <RafflesTable prizes={props.prizes}/>
+        <Winner firstname={""} lastName={""} currentPrize={""} />
     </>)
 }
 
