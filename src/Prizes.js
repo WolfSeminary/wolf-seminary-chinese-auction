@@ -40,9 +40,9 @@ const Prizes = (props) => {
    }, [numOf5nisPrizes, numOf10nisPrizes, numOf20nisPrizes])
    return (<>
       <Box sx={{ flexGrow: 1 }}>
-         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 4, md: 8 }}>
+         <Grid container spacing={{ xs: 2, md: 3 }} >
             {prizes.map((item, index) => (
-               <Grid item xs={2} sm={4} md={4} key={item.ID}>
+               <Grid item xs={2} sm={3} md={3} key={item.ID}>
                   <Prize
                      image={item.image}
                      Id={item.ID}
