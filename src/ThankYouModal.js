@@ -3,7 +3,8 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { TextField } from '@mui/material';
-import prizes from './Prizes'
+import { Button } from '@mui/material';
+import { prizesArray } from './Prizes'
 import { useResolvedPath } from 'react-router-dom';
 
 const ThankYouModal = () => {
@@ -17,7 +18,12 @@ const ThankYouModal = () => {
     setLastName(event.target.value);
   }
   const onCloseModal = () => {
-    localStorage.setItem('users', [{ ...localStorage.getItem('users'), 'firstName': firstName, 'lastName': lastName, 'prizesList': prizes }]);
+    localStorage.setItem('users',
+      [localStorage.getItem('users'), JSON.stringify({
+        'firstName': firstName,
+        'lastName': lastName,
+        'prizesList': prizesArray.filter(p => { return p.isSelected == true }).map(p => { return p.name })
+      })]);
   }
   return (
     <Box
@@ -67,7 +73,7 @@ const ThankYouModal = () => {
           <Typography>על מנת לשמור את נתוניך לצורך עריכת ההגרלות, נא הזן את הפרטים הבאים</Typography>
           <TextField label="שם פרטי" onChange={updateFirstName}></TextField>
           <TextField label="שם משפחה" onChange={updateLastName}></TextField>
-          <button onClick={onCloseModal}>שמור פרטים</button>
+          <Button variant="outlined" onClick={onCloseModal}>שמור פרטים</Button>
         </Box>
       </Modal>
     </Box>
