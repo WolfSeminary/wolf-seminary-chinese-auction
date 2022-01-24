@@ -1,10 +1,8 @@
-import React, { useState, useEffect, createContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Prize from './Prize'
 import RafflesPage from './RafflesPage'
-
-const prizesContext = createContext();
 
 const Prizes = (props) => {
    const [numOf5nisPrizes, setNumOf5nisPrizes] = useState(0);
@@ -60,7 +58,7 @@ const Prizes = (props) => {
             ))}
          </Grid>
       </Box>
-      <RafflesPage prizes={prizes}/>
+      <RafflesPage prizes={prizes} />
    </>);
 }
 
