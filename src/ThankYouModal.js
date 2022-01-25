@@ -7,8 +7,7 @@ import { Button } from '@mui/material';
 import { prizesArray } from './Prizes'
 import { useResolvedPath } from 'react-router-dom';
 
-const ThankYouModal = () => {
-  const rootRef = React.useRef(null);
+const ThankYouModal = (props) => {
   const [firstName, setFirstName] = React.useState("");
   const [lastName, setLastName] = React.useState("");
   const updateFirstName = (event) => {
@@ -18,65 +17,51 @@ const ThankYouModal = () => {
     setLastName(event.target.value);
   }
   const onCloseModal = () => {
-    localStorage.setItem('users',
-      [localStorage.getItem('users'), JSON.stringify({
-        'firstName': firstName,
-        'lastName': lastName,
-        'prizesList': prizesArray.filter(p => { return p.isSelected == true }).map(p => { return p.name })
-      })]);
+    localStorage.setItem("users",
+      [localStorage.getItem("users"), JSON.stringify(
+        {
+          'firstName': firstName,
+          'lastName': lastName,
+          'prizesList': prizesArray.filter(p => { return p.isSelected == true }).map(p => { return p.name })
+        })]);
+    props.setShouldShowThankYouModal(false)
   }
   return (
-    <Box
+    <Modal
+      open
+      onClose={onCloseModal}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
       sx={{
-        height: 300,
-        flexGrow: 1,
-        minWidth: 300,
-        transform: 'translateZ(0)',
-        '@media all and (-ms-high-contrast: none)': {
-          display: 'none',
-        },
+        display: 'flex',
+        p: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
-      ref={rootRef}
+
     >
-      <Modal
-        onClose={onCloseModal}
-        disablePortal
-        disableEnforceFocus
-        disableAutoFocus
-        open
-        aria-labelledby="server-modal-title"
-        aria-describedby="server-modal-description"
+      <Box
         sx={{
-          display: 'flex',
-          p: 1,
-          alignItems: 'center',
-          justifyContent: 'center',
+          position: 'relative',
+          width: 400,
+          bgcolor: 'background.paper',
+          border: '2px solid #000',
+          boxShadow: (theme) => theme.shadows[5],
+          p: 4,
         }}
-        container={() => rootRef.current}
       >
-        <Box
-          sx={{
-            position: 'relative',
-            width: 400,
-            bgcolor: 'background.paper',
-            border: '2px solid #000',
-            boxShadow: (theme) => theme.shadows[5],
-            p: 4,
-          }}
-        >
-          <Typography id="server-modal-title" variant="h6" component="h2">
-            תזכו למצוות!
-          </Typography>
-          <Typography id="server-modal-description" sx={{ pt: 2 }}>
-            יישר כוח על השתתפותכם בהחזקת מפעל הבית של סמינר וולף
-          </Typography>
-          <Typography>על מנת לשמור את נתוניך לצורך עריכת ההגרלות, נא הזן את הפרטים הבאים</Typography>
-          <TextField label="שם פרטי" onChange={updateFirstName}></TextField>
-          <TextField label="שם משפחה" onChange={updateLastName}></TextField>
-          <Button variant="outlined" onClick={onCloseModal}>שמור פרטים</Button>
-        </Box>
-      </Modal>
-    </Box>
+
+        <Typography id="modal-modal-title" variant="h6" component="h2">
+          תזכו למצוות!
+    </Typography>
+        <Typography id="server-modal-description" sx={{ pt: 2 }}>
+          יישר כוח על השתתפותכם בהחזקת מפעל הבית של סמינר וולף
+           </Typography>
+        <Typography>על מנת לשמור את נתוניך לצורך עריכת ההגרלות, נא הזן את הפרטים הבאים</Typography>
+        <TextField label="שם פרטי" onChange={updateFirstName}></TextField>
+        <TextField label="שם משפחה" onChange={updateLastName}></TextField>
+      </Box>
+    </Modal>
   );
 }
 export default ThankYouModal

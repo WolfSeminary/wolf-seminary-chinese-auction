@@ -1,10 +1,10 @@
 import { TextField, Typography } from '@mui/material';
 
-const Winner = () => {
+const Winner = (props) => {
     return (
         <>
-            <Typography >:והזוכה בהגרלת-------- הוא</Typography>
-            <TextField variant="outlined" multiline label="הזוכה הוא" />
+            <Typography >:הוא {props.currentPrize}  והזוכה בהגרלת  </Typography>
+            <TextField variant="outlined" value={props.firstName + " " + props.lastName} />
         </>
     )
 }

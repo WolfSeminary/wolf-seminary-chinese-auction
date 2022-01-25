@@ -1,19 +1,16 @@
 import { Button } from '@mui/material';
 import React from 'react'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import { Router } from '@mui/icons-material';
 import { Route, Routes, useNavigate } from "react-router-dom"
-import PaymentPage from './PaymentPage';
 
-
-const PayButton = () => {
+const NavigateRaffles = () => {
     let navigate = useNavigate();
     return (<>
-        <Button onClick={() => { navigate("/PaymentPage") }}>
+        <Button onClick={() => { navigate("/RafflesPage") }}>
             <KeyboardArrowLeftIcon ></KeyboardArrowLeftIcon>
-            המשך לתשלום
+            להגרלות
         </Button>
     </>
     )
 }
-export default PayButton;
+export default NavigateRaffles;

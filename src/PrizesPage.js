@@ -11,8 +11,8 @@ const PrizesPage = () => {
     const [numOfSelectedPrizes, setNumOfSelectedPrizes] = useState(0);
     return (
         <>
-            <AppBarPage numOfSelectedPrizes={numOfSelectedPrizes}/>
-            <Prizes numOfSelectedPrizes={numOfSelectedPrizes} setNumOfSelectedPrizes={setNumOfSelectedPrizes} setShowNoticeModal={setShowNoticeModal}  />
+            <AppBarPage numOfSelectedPrizes={numOfSelectedPrizes} />
+            <Prizes numOfSelectedPrizes={numOfSelectedPrizes} setNumOfSelectedPrizes={setNumOfSelectedPrizes} setShowNoticeModal={setShowNoticeModal} />
             <PayButton />
             {showNoticeModal && <BonussCard showNoticeModal={setShowNoticeModal} />}
         </>

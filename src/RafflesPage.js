@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 import AppBarPage from "./AppBarPage";
-import RaflesTable from RaflesTable
-import { useState } from "react";
+import RafflesTable from './RafflesTable'
+import Winner from './Winner'
 
 const RafflesPage = () => {
     const [curentRaffle, setCurentRaffle] = useState(null)
     const [winner, setWinner] = useState(null)
-    const onMakeRaffleClick = () => {
-        const users = localStorage.getItem('users');
-        const prize = localStorage.getItem('prizeName');
-        setCurentRaffle(prize);
+    const onMakeRaffleClick = (prizeName) => {
+        setCurentRaffle(prizeName);
+        const users = JSON.parse(localStorage.getItem("users"))
+            .filter((user) => {
+                user.prizesList.contain(curentRaffle)
+            });
         const rand = Math.floor(Math.random() * users.length);
         setWinner(users[rand]);
     }
+
     return (<>
         <AppBarPage></AppBarPage>
-        <RaflesTable></RaflesTable>
-        <Winner firstname={ } lastName={ } currentPrize={ } ></Winner>
+        <RafflesTable onMakeRaffleClick={onMakeRaffleClick}></RafflesTable>
+        {winner && <Winner firstName={winner.firstName} lastName={winner.lastName} currentPrize={curentRaffle} ></Winner>}
     </>)
 }
 export default RafflesPage;
