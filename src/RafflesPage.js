@@ -19,7 +19,7 @@ const RafflesPage = () => {
     return (<>
         <AppBarPage></AppBarPage>
         <RafflesTable onMakeRaffleClick={onMakeRaffleClick}></RafflesTable>
-        {winner && <Winner firstname={winner.firstName} lastName={winner.lastName} currentPrize={curentRaffle} ></Winner>}
+        {winner && <Winner firstName={winner.firstName} lastName={winner.lastName} currentPrize={curentRaffle} ></Winner>}
     </>)
 }
 export default RafflesPage;
