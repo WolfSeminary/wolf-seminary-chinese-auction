@@ -10,7 +10,7 @@ const RafflesPage = () => {
         setCurentRaffle(prizeName);
         const users = JSON.parse(localStorage.getItem("users"))
             .filter((user) => {
-                user.prizesList.contain(curentRaffle)
+                return user?.prizesList?.some(prize => prize == prizeName)
             });
         const rand = Math.floor(Math.random() * users.length);
         setWinner(users[rand]);
@@ -18,8 +18,9 @@ const RafflesPage = () => {
 
     return (<>
         <AppBarPage></AppBarPage>
+        {winner && <Winner firstName={winner.firstName} lastName={winner.lastName} currentPrize={curentRaffle} ></Winner> ||
+            <Winner firstName={""} lastName={""} currentPrize={curentRaffle} ></Winner>}
         <RafflesTable onMakeRaffleClick={onMakeRaffleClick}></RafflesTable>
-        {winner && <Winner firstName={winner.firstName} lastName={winner.lastName} currentPrize={curentRaffle} ></Winner>}
     </>)
 }
 export default RafflesPage;

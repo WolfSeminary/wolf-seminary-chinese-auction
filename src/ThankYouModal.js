@@ -17,13 +17,22 @@ const ThankYouModal = (props) => {
     setLastName(event.target.value);
   }
   const onCloseModal = () => {
-    localStorage.setItem("users",
-      [localStorage.getItem("users"), JSON.stringify(
+    if (localStorage.getItem("users") == null)
+      localStorage.setItem("users", JSON.stringify(
+        [JSON.parse(localStorage.getItem("users")),
         {
           'firstName': firstName,
           'lastName': lastName,
           'prizesList': prizesArray.filter(p => { return p.isSelected == true }).map(p => { return p.name })
-        })]);
+        }]));
+    else
+      localStorage.setItem("users", JSON.stringify(
+        [...JSON.parse(localStorage.getItem("users")),
+        {
+          'firstName': firstName,
+          'lastName': lastName,
+          'prizesList': prizesArray.filter(p => { return p.isSelected == true }).map(p => { return p.name })
+        }]));
     props.setShouldShowThankYouModal(false)
   }
   return (
