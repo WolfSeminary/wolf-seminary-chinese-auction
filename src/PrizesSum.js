@@ -2,9 +2,9 @@ import React from 'react'
 import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
 
-const PrizesSum = () => {
+const PrizesSum = (props) => {
     return (
-        <Badge badgeContent={0} color="primary">
+        <Badge badgeContent={props.numOfSelectedPrizes} color="primary">
             <MailIcon color="action" />
         </Badge>
     )
