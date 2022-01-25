@@ -7,13 +7,15 @@ import PrizesPage from './PrizesPage'
 
 function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="Prizes" element={<PrizesPage />} />
-        <Route path="PaymentPage" element={<PaymentPage prizes={prizesArray}></PaymentPage>} />
-      </Routes>
-      <PrizesPage />
-    </div>
+    <>
+      <div className="App">
+        <Routes>
+          <Route path="Prizes" element={<PrizesPage />} />
+          <Route path="PaymentPage" element={<PaymentPage prizes={prizesArray}></PaymentPage>} />
+          <Route path="" element={<PrizesPage />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 

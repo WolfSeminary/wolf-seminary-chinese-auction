@@ -12,7 +12,7 @@ const PaymentPage = (props) => {
     return (<>
         <AppBarPage />
         <BackButton />
-        <PricesTable prizes={props.prizes} />
+        <PricesTable prizes={prizesArray} />
         <TotalPrice prizes={prizesArray} />
         <SubmitButton setShouldShowThankYouModal={setShouldShowThankYouModal} />
         {shouldShowThankYouModal && <ThankYouModal setShouldShowThankYouModal={setShouldShowThankYouModal} />}

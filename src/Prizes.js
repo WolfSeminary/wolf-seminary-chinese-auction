@@ -8,9 +8,8 @@ const Prizes = (props) => {
    const [numOf5nisPrizes, setNumOf5nisPrizes] = useState(0);
    const [numOf10nisPrizes, setNumOf10nisPrizes] = useState(0);
    const [numOf20nisPrizes, setNumOf20nisPrizes] = useState(0);
-   let [prizes, setPrizes] = useState(prizesArray)
    const changeSelectedPrize = (id) => {
-      prizes.map((item) => {
+      prizesArray.map((item) => {
          if (id == item.ID) {
             let cc = 0
             item.isSelected = !item.isSelected;
@@ -41,7 +40,7 @@ const Prizes = (props) => {
    return (<>
       <Box sx={{ flexGrow: 1 }}>
          <Grid container spacing={{ xs: 2, md: 3 }} >
-            {prizes.map((item, index) => (
+            {prizesArray.map((item, index) => (
                <Grid item xs={2} sm={3} md={3} key={item.ID}>
                   <Prize
                      image={item.image}
@@ -58,7 +57,7 @@ const Prizes = (props) => {
             ))}
          </Grid>
       </Box>
-      <RafflesPage prizes={prizes} />
+      {/* <RafflesPage prizesArray={prizesArray} /> */}
    </>);
 }
 
