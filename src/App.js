@@ -4,6 +4,7 @@ import './App.css';
 import PaymentPage from './PaymentPage';
 import { prizesArray } from './Prizes'
 import PrizesPage from './PrizesPage'
+import RafflesPage from './RafflesPage'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="Prizes" element={<PrizesPage />} />
           <Route path="PaymentPage" element={<PaymentPage prizes={prizesArray}></PaymentPage>} />
+          <Route path="RafflesPage" element={<RafflesPage />} />
           <Route path="" element={<PrizesPage />} />
         </Routes>
       </div>

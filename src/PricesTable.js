@@ -6,32 +6,10 @@ import { prizesArray } from './Prizes';
 
 const PricesTable = (props) => {
     const [prizes, setPrizes] = useState(props.prizes.filter(p => { return p.isSelected == true }))
-    //     [
-    //         {
-    //             id: 1,
-    //             name: 'bbb',
-    //             price: 20,
-    //             count: 3
-    //         },
-    //         {
-    //             id: 2,
-    //             name: 'ccc',
-    //             price: 20,
-    //             count: 3
-    //         },
-    //         {
-    //             id: 3,
-    //             name: 'aaa',
-    //             price: 20,
-    //             count: 3
-    //         }
-    //     ]
-    // )
     const sort = () => {
         const all = [...prizes]
         setPrizes(all.sort((s1, s2) => s1.name.localeCompare(s2.name)))
     }
-
 
     return (
         <TableContainer>

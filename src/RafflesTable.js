@@ -5,15 +5,16 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { prizesArray } from './Prizes';
 
 const RafflesTable = (props) => {
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableBody>
-                    {props.prizes.map(prize => (
+                    {prizesArray.map(prize => (
                         <TableRow key={prize.ID} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell align="center"><button>הגרל</button></TableCell>
+                            <TableCell align="center"><button onClick={() => props.onMakeRaffleClick(prize.name)}>הגרל</button></TableCell>
                             <TableCell align="center">{prize.name}</TableCell>
                         </TableRow>)
                     )}
