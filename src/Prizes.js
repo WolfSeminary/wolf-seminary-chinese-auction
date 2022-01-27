@@ -82,7 +82,7 @@ export const prizesArray = [
   {
     ID: 2,
     name: "פאה",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "פאת קסטם",
     price: 20,
     isSelected: false,
@@ -90,7 +90,7 @@ export const prizesArray = [
   {
     ID: 3,
     name: "מייבש כביסה",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "מייבש כביסה של חברת ZANUSSI",
     price: 20,
     isSelected: false,
@@ -98,7 +98,7 @@ export const prizesArray = [
   {
     ID: 4,
     name: "עגלת תינוק",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "עגלת שכיבה לתינוק",
     price: 20,
     isSelected: false,
@@ -106,7 +106,7 @@ export const prizesArray = [
   {
     ID: 5,
     name: "נעליים לכל המשפחה",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "10 זוגות נעליים לכל המשפחה",
     price: 10,
     isSelected: false,
@@ -114,7 +114,7 @@ export const prizesArray = [
   {
     ID: 6,
     name: "1000₪ ביש",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "שובר כספי לרשת יש",
     price: 10,
     isSelected: false,
@@ -122,7 +122,7 @@ export const prizesArray = [
   {
     ID: 7,
     name: "1000₪ בקידהישיק",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "שובר כספי לרשת קידישיק",
     price: 10,
     isSelected: false,
@@ -130,7 +130,7 @@ export const prizesArray = [
   {
     ID: 8,
     name: "1000₪ בבת של מלך",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "שובר כספי לרשת בת מלך",
     price: 10,
     isSelected: false,
@@ -138,7 +138,7 @@ export const prizesArray = [
   {
     ID: 9,
     name: "ערכת פליימוביל",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "בית בובות ענק",
     price: 5,
     isSelected: false,
@@ -146,7 +146,7 @@ export const prizesArray = [
   {
     ID: 10,
     name: "סט מצעים",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "זוג מצעים מפואר",
     price: 5,
     isSelected: false,
@@ -154,7 +154,7 @@ export const prizesArray = [
   {
     ID: 11,
     name: "אורגית",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "אורגנית איכותית",
     price: 5,
     isSelected: false,
@@ -162,7 +162,7 @@ export const prizesArray = [
   {
     ID: 12,
     name: "מחשב נייד",
-    image: "./images/Pcomputer.jpg",
+    image: "./images/pcomputer.jpg",
     description: "מחשב נייד קומפקטי",
     price: 5,
     isSelected: false,
