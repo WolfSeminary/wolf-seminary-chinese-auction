@@ -1,58 +1,43 @@
-import React, { useState } from 'react';
-import Modal from '@mui/material/Modal';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import React from "react";
+import Modal from "@mui/material/Modal";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
-const BonussCard = (props) => {
-  const rootRef = React.useRef(null);
+export default function NoticeModal(props) {
   const onCloseModal = () => {
     props.showNoticeModal(false);
-  }
-  return (
-    // <Box
+  };
 
-    //   sx={{
-    //     height: 300,
-    //     flexGrow: 1,
-    //     minWidth: 300,
-    //     transform: 'translateZ(0)',
-    //     '@media all and (-ms-high-contrast: none)': {
-    //       display: 'none',
-    //     },
-    //   }}
-    //   ref={rootRef}
-    // >
+  return (
     <Modal
       open
       onClose={onCloseModal}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
       sx={{
-        display: 'flex',
+        display: "flex",
         p: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Box
         sx={{
-          position: 'relative',
+          position: "relative",
           width: 400,
-          bgcolor: 'background.paper',
-          border: '2px solid #000',
+          bgcolor: "background.paper",
+          border: "2px solid #000",
           boxShadow: (theme) => theme.shadows[5],
           p: 4,
         }}
       >
         <Typography id="server-modal-title" variant="h6" component="h2">
           !כרטיס בונוס
-          </Typography>
+        </Typography>
         <Typography id="server-modal-description" sx={{ pt: 2 }}>
           קנית 3 כרטיסים מאותה קטגוריה בחר מתנה נוספת בחינם
-          </Typography>
+        </Typography>
       </Box>
     </Modal>
-    // </Box>
   );
 }
-export default BonussCard;

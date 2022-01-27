@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import PrizesSum from './PrizesSum'
+
 export default function AppBarPage(props) {
     return (
         <Box sx={{ flexGrow: 1 }}>
