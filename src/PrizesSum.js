@@ -1,13 +1,11 @@
 import React from 'react'
 import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 
-const PrizesSum = (props) => {
+export default function PrizesSum(props) {
     return (
         <Badge badgeContent={props.numOfSelectedPrizes} color="primary">
-            <MailIcon color="action" />
+            <CardGiftcardIcon color="action" />
         </Badge>
     )
 }
-
-export default PrizesSum
