@@ -42,7 +42,7 @@ export default function Prizes(props) {
         props.setShowNoticeModal(false);
       }, 3000);
     }
-  }, [numOf5nisPrizes, numOf10nisPrizes, numOf20nisPrizes, props]);
+  }, [numOf5nisPrizes, numOf10nisPrizes, numOf20nisPrizes]);
 
   return (
     <>
