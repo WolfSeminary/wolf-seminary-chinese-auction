@@ -3,7 +3,7 @@ import AppBarPage from "./AppBarPage";
 import RafflesTable from './RafflesTable'
 import Winner from './Winner'
 
-const RafflesPage = () => {
+const RafflesPage = (props) => {
     const [curentRaffle, setCurentRaffle] = useState(null)
     const [winner, setWinner] = useState(null)
     const onMakeRaffleClick = (prizeName) => {
@@ -20,7 +20,7 @@ const RafflesPage = () => {
         <AppBarPage></AppBarPage>
         {winner && <Winner firstName={winner.firstName} lastName={winner.lastName} currentPrize={curentRaffle} ></Winner> ||
             <Winner firstName={""} lastName={""} currentPrize={curentRaffle} ></Winner>}
-        <RafflesTable onMakeRaffleClick={onMakeRaffleClick}></RafflesTable>
+        <RafflesTable prizesArray={props.prizesArray} onMakeRaffleClick={onMakeRaffleClick}></RafflesTable>
     </>)
 }
 export default RafflesPage;
