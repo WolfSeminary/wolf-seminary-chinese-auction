@@ -5,8 +5,6 @@ import ThankYouModal from './ThankYouModal'
 import React, { useState } from "react";
 import BackButton from './BackButton'
 import AppBarPage from "./AppBarPage";
-import { prizesArray } from './Prizes'
-import RafflesPage from "./RafflesPage";
 import NavigateRaffles from "./NavigateRaffles";
 
 const PaymentPage = (props) => {
@@ -14,10 +12,10 @@ const PaymentPage = (props) => {
     return (<>
         <AppBarPage />
         <BackButton />
-        <PricesTable prizes={prizesArray} />
-        <TotalPrice prizes={prizesArray} />
+        <PricesTable prizes={props.prizesArray} />
+        <TotalPrice prizes={props.prizesArray} />
         <SubmitButton setShouldShowThankYouModal={setShouldShowThankYouModal} />
-        {shouldShowThankYouModal && <ThankYouModal setShouldShowThankYouModal={setShouldShowThankYouModal} />}
+        {shouldShowThankYouModal && <ThankYouModal prizesArray={props.prizesArray} setShouldShowThankYouModal={setShouldShowThankYouModal} />}
         <NavigateRaffles></NavigateRaffles>
     </>);
 }

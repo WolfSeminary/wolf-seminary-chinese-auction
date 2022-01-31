@@ -3,7 +3,6 @@ import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { TextField } from "@mui/material";
-import { prizesArray } from "./Prizes";
 
 export default function ThankYouModal(props) {
   const [firstName, setFirstName] = React.useState("");
@@ -23,7 +22,7 @@ export default function ThankYouModal(props) {
           {
             firstName: firstName,
             lastName: lastName,
-            prizesList: prizesArray
+            prizesList: props.prizesArray
               .filter((p) => {
                 return p.isSelected == true;
               })
@@ -41,7 +40,7 @@ export default function ThankYouModal(props) {
           {
             firstName: firstName,
             lastName: lastName,
-            prizesList: prizesArray
+            prizesList: props.prizesArray
               .filter((p) => {
                 return p.isSelected == true;
               })
@@ -53,7 +52,7 @@ export default function ThankYouModal(props) {
       );
     props.setShouldShowThankYouModal(false);
   };
-  
+
   return (
     <Modal
       open
