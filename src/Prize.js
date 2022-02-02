@@ -17,7 +17,7 @@ export default function Prize(props) {
     <Card sx={{ maxWidth: 345 }} style={{ textAlign: "center" }}>
       <CardMedia
         component="img"
-        height="140"
+        height="220"
         image={props.image}
         alt="prize image"
       />
