@@ -7,7 +7,7 @@ import BackButton from "./BackButton";
 import AppBarPage from "./AppBarPage";
 import NavigateRaffles from "./NavigateRaffles";
 
-const PaymentPage = (props) => {
+export default function PaymentPage(props) {
   const [shouldShowThankYouModal, setShouldShowThankYouModal] = useState(false);
   return (
     <>
@@ -27,5 +27,4 @@ const PaymentPage = (props) => {
       <NavigateRaffles></NavigateRaffles>
     </>
   );
-};
-export default PaymentPage;
+}

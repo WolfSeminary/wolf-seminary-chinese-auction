@@ -7,7 +7,7 @@ export default function TotalPrice(props) {
   useEffect(() => {
     let sum = 0;
     props.prizes.forEach((element) => {
-      if (element.isSelected === true) sum += element.price;
+      if (element.isSelected) sum += element.price;
     });
     setTotalPrice(sum);
   }, [props.prizes]);

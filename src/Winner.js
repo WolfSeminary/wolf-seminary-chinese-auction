@@ -1,11 +1,21 @@
-import { TextField, Typography } from '@mui/material';
+import { Grid, TextField, Typography } from "@mui/material";
 
-const Winner = (props) => {
-    return (
-        <div>
-            <Typography >:והזוכה בהגרלת {props.currentPrize} הוא</Typography>
-            <TextField variant="outlined" value={props.firstName + " " + props.lastName} ></TextField>
-        </div>
-    )
+export default function Winner(props) {
+  return (
+    <Grid
+      xs={5}
+      container
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Typography>:והזוכה בהגרלת {props.currentPrize} הוא</Typography>
+      <TextField
+        variant="outlined"
+        value={props.firstName + " " + props.lastName}
+        multiline
+        rows={5}
+      />
+    </Grid>
+  );
 }
-export default Winner

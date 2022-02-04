@@ -14,42 +14,19 @@ export default function ThankYouModal(props) {
     setLastName(event.target.value);
   };
   const onCloseModal = () => {
-    if (localStorage.getItem("users") == null)
-      localStorage.setItem(
-        "users",
-        JSON.stringify([
-          JSON.parse(localStorage.getItem("users")),
-          {
-            firstName: firstName,
-            lastName: lastName,
-            prizesList: props.prizesArray
-              .filter((p) => {
-                return p.isSelected == true;
-              })
-              .map((p) => {
-                return p.name;
-              }),
-          },
-        ])
-      );
-    else
-      localStorage.setItem(
-        "users",
-        JSON.stringify([
-          ...JSON.parse(localStorage.getItem("users")),
-          {
-            firstName: firstName,
-            lastName: lastName,
-            prizesList: props.prizesArray
-              .filter((p) => {
-                return p.isSelected == true;
-              })
-              .map((p) => {
-                return p.name;
-              }),
-          },
-        ])
-      );
+    localStorage.setItem(
+      "users",
+      JSON.stringify([
+        ...JSON.parse(localStorage.getItem("users") || "[]"),
+        {
+          firstName: firstName,
+          lastName: lastName,
+          prizesList: props.prizesArray
+            .filter(({ isSelected }) => isSelected)
+            .map(({ name }) => name),
+        },
+      ])
+    );
     props.setShouldShowThankYouModal(false);
   };
 
@@ -68,11 +45,10 @@ export default function ThankYouModal(props) {
     >
       <Box
         sx={{
-          position: "relative",
           width: 400,
           bgcolor: "background.paper",
           border: "2px solid #000",
-          boxShadow: (theme) => theme.shadows[5],
+          textAlign: "center",
           p: 4,
         }}
       >
@@ -85,8 +61,8 @@ export default function ThankYouModal(props) {
         <Typography>
           על מנת לשמור את נתוניך לצורך עריכת ההגרלות, נא הזן את הפרטים הבאים
         </Typography>
-        <TextField label="שם פרטי" onChange={updateFirstName}></TextField>
-        <TextField label="שם משפחה" onChange={updateLastName}></TextField>
+        <TextField label="שם פרטי" onChange={updateFirstName} />
+        <TextField label="שם משפחה" onChange={updateLastName} />
       </Box>
     </Modal>
   );
