@@ -8,12 +8,13 @@ export default function ContinueToPayment() {
 
   return (
     <Button
+      size="large"
       variant="contained"
       onClick={() => {
         navigate("/PaymentPage");
       }}
+      startIcon={<KeyboardArrowLeftIcon />}
     >
-      <KeyboardArrowLeftIcon />
       המשך לתשלום
     </Button>
   );

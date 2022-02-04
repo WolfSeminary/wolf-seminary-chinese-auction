@@ -32,9 +32,9 @@ export default function Prizes(props) {
   };
   useEffect(() => {
     if (
-      (numOf5nisPrizes % 3 === 0 && numOf5nisPrizes !== 0) ||
-      (numOf20nisPrizes % 3 === 0 && numOf20nisPrizes !== 0) ||
-      (numOf10nisPrizes % 3 === 0 && numOf10nisPrizes !== 0)
+      (numOf5nisPrizes && !(numOf5nisPrizes % 3)) ||
+      (numOf20nisPrizes && !(numOf20nisPrizes % 3)) ||
+      (numOf10nisPrizes && !(numOf10nisPrizes % 3))
     ) {
       props.setShowNoticeModal(true);
       setTimeout(() => {
