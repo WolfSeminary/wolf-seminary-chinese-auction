@@ -6,7 +6,6 @@ import PrizesPage from './PrizesPage'
 import RafflesPage from './RafflesPage'
 
 function App() {
- 
   const [prizesArray, setPrizesArray] = useState([
     {
       ID: 1,
@@ -105,7 +104,6 @@ function App() {
       isSelected: false,
     },
   ])
-
   return (
     <>
       <div className="App">
