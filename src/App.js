@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import PaymentPage from './PaymentPage';
-import PrizesPage from './PrizesPage'
-import RafflesPage from './RafflesPage'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import PaymentPage from "./PaymentPage";
+import PrizesPage from "./PrizesPage";
+import RafflesPage from "./RafflesPage";
 
-function App() {
-  const [prizesArray, setPrizesArray] = useState([
+export default function App() {
+  const prizesArray = [
     {
       ID: 1,
       name: "חדר ילדים",
@@ -103,19 +103,20 @@ function App() {
       price: 5,
       isSelected: false,
     },
-  ])
+  ];
+
   return (
-    <>
-      <div className="App">
-        <Routes>
-          <Route path="Prizes" element={<PrizesPage prizesArray={prizesArray} />} />
-          <Route path="PaymentPage" element={<PaymentPage prizesArray={prizesArray} />} />
-          <Route path="RafflesPage" element={<RafflesPage prizesArray={prizesArray} />} />
-          <Route path="" element={<PrizesPage prizesArray={prizesArray} />} />
-        </Routes>
-      </div>
-    </>
+    <Routes>
+      <Route path="Prizes" element={<PrizesPage prizesArray={prizesArray} />} />
+      <Route
+        path="PaymentPage"
+        element={<PaymentPage prizesArray={prizesArray} />}
+      />
+      <Route
+        path="RafflesPage"
+        element={<RafflesPage prizesArray={prizesArray} />}
+      />
+      <Route path="" element={<PrizesPage prizesArray={prizesArray} />} />
+    </Routes>
   );
 }
-
-export default App;

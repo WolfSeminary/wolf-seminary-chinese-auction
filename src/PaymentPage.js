@@ -1,22 +1,30 @@
 import TotalPrice from "./TotalPrice";
-import SubmitButton from './SubmitButton'
-import PricesTable from './PricesTable'
-import ThankYouModal from './ThankYouModal'
+import SubmitButton from "./SubmitButton";
+import PricesTable from "./PricesTable";
+import ThankYouModal from "./ThankYouModal";
 import React, { useState } from "react";
-import BackButton from './BackButton'
+import BackButton from "./BackButton";
 import AppBarPage from "./AppBarPage";
 import NavigateRaffles from "./NavigateRaffles";
 
-const PaymentPage = (props) => {
-    const [shouldShowThankYouModal, setShouldShowThankYouModal] = useState(false);
-    return (<>
-        <AppBarPage />
+export default function PaymentPage(props) {
+  const [shouldShowThankYouModal, setShouldShowThankYouModal] = useState(false);
+  return (
+    <>
+      <AppBarPage>
         <BackButton />
-        <PricesTable prizes={props.prizesArray} />
-        <TotalPrice prizes={props.prizesArray} />
-        <SubmitButton setShouldShowThankYouModal={setShouldShowThankYouModal} />
-        {shouldShowThankYouModal && <ThankYouModal prizesArray={props.prizesArray} setShouldShowThankYouModal={setShouldShowThankYouModal} />}
-        <NavigateRaffles></NavigateRaffles>
-    </>);
+      </AppBarPage>
+
+      <PricesTable prizes={props.prizesArray} />
+      <TotalPrice prizes={props.prizesArray} />
+      <SubmitButton setShouldShowThankYouModal={setShouldShowThankYouModal} />
+      {shouldShowThankYouModal && (
+        <ThankYouModal
+          prizesArray={props.prizesArray}
+          setShouldShowThankYouModal={setShouldShowThankYouModal}
+        />
+      )}
+      <NavigateRaffles></NavigateRaffles>
+    </>
+  );
 }
-export default PaymentPage;

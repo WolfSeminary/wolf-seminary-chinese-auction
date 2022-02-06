@@ -13,7 +13,7 @@ export default function SubmitButton(props) {
         <Button direction="column" variant="contained" onClick={onSubmit}>
           אשר הכנסת סכום מדויק לתשלום בקופות הייעודיות
         </Button>
-        <div class="arrow bounce">
+        <div className="arrow bounce">
           <ArrowDownwardIcon />
         </div>
       </Stack>
