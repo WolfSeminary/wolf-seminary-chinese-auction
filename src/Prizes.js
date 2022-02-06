@@ -45,7 +45,7 @@ export default function Prizes(props) {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, margin: '8px' }}>
         <Grid container spacing={{ xs: 2, md: 3 }}>
           {props.prizesArray.map((item) => (
             <Grid item xs={2} sm={3} md={3} key={item.ID}>
